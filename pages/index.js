@@ -3,10 +3,11 @@ import Image from "next/image";
 import Avatar from "../components/Avatar";
 import { ViewGridIcon, MicrophoneIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen">
       <Head>
         <title>Google App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,8 +28,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Body*/}
-      <form className="flex flex-col items-center mt-44 flex-grow">
+      <form className="flex flex-col  items-center mt-44 flex-grow w-4/5">
         <Image
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
           alt="google-logo"
@@ -47,6 +47,7 @@ export default function Home() {
       </form>
 
       {/* Footer*/}
+      <Footer />
     </div>
   );
 }
